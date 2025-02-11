@@ -33,7 +33,7 @@ for i in range(len(stringSentences)):
 
 # Run ManifestoBERTa
 
-Run_ManifestoBERTa is the recommended method for implementing Manifesto Project's ManifestoBERTa context model, and is not original code
+Run_ManifestoBERTa is the recommended method for implementing Manifesto Project's [ManifestoBERTa context model](https://huggingface.co/manifesto-project/manifestoberta-xlm-roberta-56policy-topics-context-2024-1-1), and is not original code
 
 
 
