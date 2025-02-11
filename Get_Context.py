@@ -4,13 +4,10 @@ def Get_Context(sentences, index, maxTokens=200):
     targetIds = tokenizer.encode(targetSentence, add_special_tokens = False)
     targetLen = len(targetIds)
 
-
     leftIndex = index - 1
     rightIndex = index + 1
 
-
     contextTokens = []
-
 
     while (leftIndex >= 0 or rightIndex < len(sentences)) and len(contextTokens) < (maxTokens):
         if leftIndex >= 0:
@@ -24,11 +21,9 @@ def Get_Context(sentences, index, maxTokens=200):
         if len(contextTokens) >= maxTokens:
             break
 
-
     if len(contextTokens) > maxTokens:
         contextTokens = contextTokens[:maxTokens]
    
     contextText = tokenizer.decode(contextTokens, skip_special_tokens = True)
-
 
     return targetSentence, contextText
