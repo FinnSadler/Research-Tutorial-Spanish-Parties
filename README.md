@@ -19,7 +19,7 @@ print(cleanedManifesto)
 
 # Get Context
 
-Get_Context is a Python function that prepares ```python cleanedManifesto``` for analysis by ManifestoBERTa's context model by creating context strings with neighbouring sentences for each sentence in the text. Sentences must first be detected with SpaCy's Spanish transformer model and saved as a list
+Get_Context is a Python function that prepares ```cleanedManifesto``` for analysis by ManifestoBERTa's context model by creating context strings with neighbouring sentences for each sentence in the text. Sentences must first be detected with SpaCy's Spanish transformer model and saved as a list
 
 ## Example Usage
 
