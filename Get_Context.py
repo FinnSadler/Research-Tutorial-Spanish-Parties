@@ -1,3 +1,6 @@
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-large")
+
 def Get_Context(sentences, index, maxTokens=200):
     """For sentence at position index, create a context string from neighbouring sentences of tokens <= 200"""
     targetSentence = sentences[index]
