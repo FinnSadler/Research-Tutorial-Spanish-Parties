@@ -1,3 +1,6 @@
+import re
+import PyPDF2
+
 def Extract_And_Preprocess(pdf_path, skip_pages):
     """
     This function should be used BEFORE passing text to spaCy so sentences can be detected.
