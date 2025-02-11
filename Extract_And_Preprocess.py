@@ -5,7 +5,6 @@ def Extract_And_Preprocess(pdf_path, skip_pages):
 
     Takes PDF, reads it into Python as text and cleans it:
         - Removes line breaks
-        - Removes '.'s
         - Removes bullet points
         - Removes page numbers
         - Removes trailing whitespace
