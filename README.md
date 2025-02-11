@@ -19,19 +19,23 @@ print(cleanedManifesto)
 
 # Get Context
 
-Get_Context is a Python function that prepares ```python cleanedManifesto``` for analysis by ManifestoBERTa's context model by creating context strings with neighbouring sentences for each sentence in the text
+Get_Context is a Python function that prepares ```python cleanedManifesto``` for analysis by ManifestoBERTa's context model by creating context strings with neighbouring sentences for each sentence in the text. Sentences must first be detected with SpaCy's Spanish transformer model and saved as a list
 
 ## Example Usage
 
 ```python
-pdf_path = #Path to your PDF here
-skip_pages = #Page number that you wish the function to begin extracting from (useful for removing contents pages etc)
+sentencesAndContext = {}
 
-Extract_And_Preprocess(pdf_path, skip_pages)
+for i in range(len(stringSentences)):
+    sentence, context = Get_Context(stringSentences, i, maxTokens=200) 
+    sentencesAndContext[sentence] = context
+```
 
-print(cleanedManifesto)
-```python
-Get_Context(sentences, index, maxTokens=200)
+# Run ManifestoBERTa
+
+Run_ManifestoBERTa is the recommended method for implementing Manifesto Project's ManifestoBERTa context model, and is not original code
+
+
 
 
 
